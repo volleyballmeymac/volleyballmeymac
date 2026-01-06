@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Volley Ball Meymac</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="main-nav">
+        <div class="nav-left">
+            <img src="img-code/club.png" alt="logo du club" class="nav-logo">
+            <span class="nav-title">Volley Ball Meymac</span>
+        </div>
+        <ul class="nav-right">
+            <li><a href="#notre-club">Notre Club</a></li>
+            <li><a href="#entrainement">Entraînements</a></li>
+            <li><a href="#competition">Compétitions</a></li>
+            <li><a href="#maillot">Maillot et Sponsors</a></li>
+            <li><a href="#evenement">Evènements</a></li>
+            <li><a href="#gallery-photo">Photos</a></li>
+            <li><a href="#documents">Documents</a></li>
+        </ul>
+        <button class="burger" id="burger" aria-label="Menu">
+            ☰
+        </button>
+    </nav>
+
+    <header>
+        <h1>Club de volley de Meymac</h1>
+        <p>Bienvenue sur notre site officiel ! Retrouvez toutes les infos sur le club, nos entraînements, les compétitions et les événements.</p>
+        <img src="img-code/club.png">
+        <div class="header-widgets">
+    <!-- Widget Événement à gauche -->
+            <div class="header-widget header-widget-event" onclick="location.href='#evenement';">
+                <div class="widget-title">Prochain Événement</div>
+                <div class="widget-body">
+                    <img class="event-image" >
+                    <div class="event-title"></div>
+                    <div class="event-date"></div>
+                    <div class="event-location"></div>
+                </div>
+            </div>
+
+    <!-- Widget Match à droite -->
+            <div class="header-widget header-widget-match"onclick="location.href='#competition';">
+                <div class="widget-title">Prochain Match</div>
+                 <div class="widget-body">
+                    <div class="match-date"></div>
+                    <div class="match-teams">
+                        <div class="team team-home">
+                            <span class="team-name"></span>
+                            <img src="" alt="Équipe domicile" class="logo-team">
+                        </div>
+                        <div class="team-vs">vs</div>
+                        <div class="team team-away">
+                            <img class="logo-team" src="" alt="Équipe extérieure">
+                            <span class="team-name"></span>
+                        </div>
+                    </div>
+                    <div class="match-location"></div>
+                    <div class="match-type"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <section id="notre-club" class="bg-blue">
+        <H2> Découvrez Nous</H2>
+        <div class="widget-club">
+            <div class="club-card club-info">
+                <h3>Notre Club</h3>
+                <p>
+                    Créé en 2025 par des élèves de l'École Forestière de Meymac, notre club de volley évolue au sein de l'UFOLEP.<br>
+                    Il ouvre ses portes à tous à partir de 15 ans, des débutants aux joueurs plus confirmés, dans une ambiance conviviale et dynamique.<br>
+                    Ici, chacun peut progresser à son rythme, que ce soit pour le loisir ou la compétition, tout en partageant la passion du volley et la camaraderie.<br>
+                 </p>
+            </div>
+            <div class="club-card contact-info">
+                <h3>Nous Contacter</h3>
+                <p>📞 06 10 34 58 41</p>
+                <p>📧 volleyballmeymac@gmail.com</p>
+            </div>
+        </div>
+        <div class="interactive-map">
+            <h3>Notre Gymnase</h3>
+            <p>Découvrez où se situe notre gymnase pour venir nous rejoindre facilement</p>
+            <div id="map"></div>
+            <a 
+                href="https://www.google.com/maps/dir/?api=1&destination=45.53219, 2.14176"
+                class="btn-itineraire"
+                target="_blank"
+                rel="noopener"
+            >
+                🚗  Charger l'itinéraire
+            </a>
+
+        </div>
+    </section>
+
+    <section id="entrainement" class="bg-white">
+        <h2>Horaires des Entraînements</h2>
+        <p>Nos séances d'entraînement sont ouvertes à tous les membres, débutants comme confirmés.</p>
+        <div class="trainings-container">
+            <div class="training-cards">
+                <div class="training-card">
+                    <div class="training-day">Lundi</div>
+                    <div class="training-info">
+                            <div class="training-info-item">⏰ 18h00 - 20h00</div>
+                            <div class="training-info-item">📍 Complexe sportif de Grandchamp, Meymac</div>
+                            <div class="training-info-item">🏐 Séance orientée compétition</div>
+                            <div class="training-info-item">👥 Accessible à tous, débutants ou confirmés</div>
+
+                    </div>
+                </div>
+                <div class="training-card">
+                    <div class="training-day">Jeudi</div>
+                    <div class="training-info">
+                        <div class="training-info-item">⏰ À partir de 18h00</div>
+                        <div class="training-info-item">📍 Complexe sportif de Grandchamp, Meymac</div>
+                        <div class="training-info-item">🏐 Séance orientée loisir</div>
+                        <div class="training-info-item">👥 Ambiance loisir et progression, séance plus douce</div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+<section id="competition" class="bg-blue">
+    <h2>Programme des Compétitions</h2>
+    <p>Ne manquez aucun match ! Voici le planning des prochaines rencontres de notre club, pour suivre l’équipe et encourager nos joueurs.</p>
+
+    <div class="match-list">
+
+    <!-- Match 08/01/2026 -->
+        <div class="match-card match-upcoming">
+            <div class="match-date">08/01/2026</div>
+            <div class="match-teams">
+                <div class="team">
+                    <span class="team-name">Meymac<img class="logo-team" src="img-code/club.png"></span>
+                </div>
+                <div class="team-score">0 - 0</div>
+                <div class="team">
+                    <span class="team-name"><img class="logo-team" src="logo-club/allassac.png">Allassac 5</span>
+                 </div>
+            </div>
+            <div class="match-score">⏰ 20h30 échauffement</div>
+            <div class="match-type">Championnat mixte</div>
+            <div class="match-location">📍 Complexe sportif de Grandchamp, Meymac</div>
+            <div class="match-status">À venir</div>
+        </div>
+
+    <!-- Match 26/02/2026 -->
+        <div class="match-card match-upcoming">
+            <div class="match-date">26/02/2026</div>
+            <div class="match-teams">
+                <div class="team">
+                    <span class="team-name">Meymac<img class="logo-team" src="img-code/club.png"></span>
+                </div>
+                <div class="team-score">0 - 0</div>
+                <div class="team">
+                    <span class="team-name"><img class="logo-team" src="logo-club/laguenne.png">Laguenne 5</span>
+                </div>
+            </div>
+            <div class="match-score">⏰ 20h30 échauffement</div>
+            <div class="match-type">Championnat mixte</div>
+            <div class="match-location">📍 Complexe sportif de Grandchamp, Meymac</div>
+            <div class="match-status">À venir</div>
+        </div>
+
+    <!-- Match 12/03/2026 -->
+        <div class="match-card match-upcoming">
+            <div class="match-date">12/03/2026</div>
+            <div class="match-teams">
+                <div class="team">
+                    <span class="team-name">Meymac<img class="logo-team" src="img-code/club.png"></span>
+                </div>
+                <div class="team-score">0 - 0</div>
+                <div class="team">
+                    <span class="team-name"><img class="logo-team" src="logo-club/AVB.png">AVB 3</span>
+                </div>
+            </div>
+            <div class="match-score">⏰ 20h30 échauffement</div>
+            <div class="match-type">Championnat mixte</div>
+            <div class="match-location">📍 Complexe sportif de Grandchamp, Meymac</div>
+            <div class="match-status">À venir</div>
+        </div>
+
+    <!-- Match 23/04/2026 -->
+        <div class="match-card match-upcoming">
+            <div class="match-date">23/04/2026</div>
+            <div class="match-teams">
+                <div class="team">
+                    <span class="team-name">Meymac<img class="logo-team" src="img-code/club.png"></span>
+                </div>
+                <div class="team-score">0 - 0</div>
+                <div class="team">
+                     <span class="team-name"><img class="logo-team" src="logo-club/laguenne.png">Laguenne 4</span>
+                </div>
+            </div>
+            <div class="match-score">⏰ 20h30 échauffement</div>
+            <div class="match-type">Championnat mixte</div>
+            <div class="match-location">📍 Complexe sportif de Grandchamp, Meymac</div>
+            <div class="match-status">À venir</div>
+        </div>
+
+    <!-- Match 21/05/2026 -->
+        <div class="match-card match-upcoming">
+            <div class="match-date">21/05/2026</div>
+            <div class="match-teams">
+                <div class="team">
+                    <span class="team-name">Meymac<img class="logo-team" src="img-code/club.png"></span>
+                </div>
+                <div class="team-score">0 - 0</div>
+                <div class="team">
+                    <span class="team-name"><img class="logo-team" src="logo-club/AVB.png">AVB 2</span>
+                </div>
+            </div>
+            <div class="match-score">⏰ 20h30 échauffement</div>
+            <div class="match-type">Championnat mixte</div>
+            <div class="match-location">📍 Complexe sportif de Grandchamp, Meymac</div>
+            <div class="match-status">À venir</div>
+        </div>
+
+    </div>
+</section>
+
+    <section id="maillot" class="bg-white">
+        <h2>Le maillot</h2>
+        <p>Découvrez le maillot officiel du club.</p>
+        <div class="maillot-video-wrapper">
+            <video id="maillotVideo" autoplay muted loop playsinline preload="metadata">
+                <source src="maillot/maillot.mp4" type="video/mp4">
+            </video>
+            <input type="range" id="maillotSlider" min="0" max="10000" step="1">
+        </div>
+    </section>
+
+    <section id="sponsors" class="bg-white">
+        <h2>Nos sponsors</h2>
+        <p>Nous remercions nos partenaires pour leur soutien !</p>
+        <div class="carrousel">
+            <div class="carrousel-track">
+                <a href="https://lecomptoirsaintandre.fr/" class="carousel-item active" target="_blank"><img src="sponsors/le-comptoir-saint-andre.png" alt="Le comptoir saint andré"></a>
+                <a href="https://elagus.fr/" class="carousel-item big-logo" target="_blank"><img src="sponsors/ela-gus.png" alt="Ela'gus"></a>
+                <a href="https://www.achetezenhautecorreze.fr/4-mode-et-accessoires#/boutique-destination_foret" class="carousel-item" target="_blank"><img src="sponsors/destination-foret.png" alt="Destination Forêt"></a>
+                <a href="https://www.facebook.com/people/Marie-Coiff/100039223675893/" class="carousel-item" target="_blank"><img src="sponsors/marie-coiff.png" alt="Marie coiff"></a>
+                <a href="https://epl-haute-correze.fr/atelier-technologique" class="carousel-item" target="_blank"><img src="sponsors/atelier-techno-meymac.jpg" alt="Atelier techno de l'Ef de Meymac"></a>
+                <a href="http://fargesbois.fr/fr/" class="carousel-item" target="_blank"><img src="sponsors/farges-bois.png" alt="Farges bois"></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="evenement"class="bg-blue">
+        <h2>Evenement à venir</h2>
+        <p>Ne manquez pas nos prochains événements et activités !</p>
+        <div class="evenements-cards">
+            <div class="evenement-card">
+                <img class="Presentation-img" >
+                <div class="event-type-badge">À définir</div>
+                <h3 class="event-title">🎉 Prochain événement à définir</h3>
+                <div class="envent-details">
+                    <div class="event-date">🗓️ À venir</div>
+                    <div class="event-info">📢 Complexe sportif de Grandchamp, Meymac,...</div>
+                    <div class="event-description"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery-photo" class="bg-white">
+        <h2>Galerie Photos</h2>
+        <p>Découvrez notre univers</p>
+        <div class="gallery-filter">
+            <button class="button-filter" data-category="all"><img src="img-code/Tout.png"></button>
+            <button class="button-filter" data-category="competition"><img src="img-code/Compétition.png"></button>
+            <button class="button-filter" data-category="entrainement"><img src="img-code/Entraînement.png"></button>
+            <button class="button-filter" data-category="evenement"><img src="img-code/Evenement.png"></button>
+            <button class="button-filter" data-category="divers"><img src="img-code/Divers.png"></button>
+        </div>
+        <div class="photo">
+            <div class="photo-card" data-category="entrainement"><img src="gallery/ent1.jpeg"></div>
+            <div class="photo-card" data-category="entrainement"><img src="gallery/ent6.jpeg"></div>
+            <div class="photo-card" data-category="entrainement"><img src="gallery/ent3.jpeg"></div>
+            <div class="photo-card" data-category="entrainement"><img src="gallery/ent7.jpeg"></div>
+            <div class="photo-card" data-category="entrainement"><img src="gallery/ent5.jpeg"></div>
+            <div class="photo-card" data-category="divers"><img src="gallery/maillot.png"></div>
+        </div>
+    </section>
+
+    <section id="documents"class="bg-blue">
+        <h2>Documents d'inscription</h2>
+        <p>Téléchargez tous les documents nécessaires pour votre inscription</p>
+        <div class="documents-list">
+
+            <div class="document-card">
+                <div class="document-info">
+                    <div class="document-icon">📄</div>
+                    <h3 class="document-title">Formulaire de licence 2024-2025</h3>
+                    <p class="document-description">Document à remplir pour obtenir votre licence</p>
+                    <div class="document-meta">
+                    <span class="document-category">Licence</span>
+                    <span class="document-size">245 KB</span>
+                    </div>
+                    <button class="btn-download" onclick="downloadDocument('25-26-Demande_Licence_Ufolep')">
+                    Télécharger
+                    </button>
+                </div>
+            </div>
+
+            <div class="document-card">
+                <div class="document-info">
+                    <div class="document-icon">📄</div>
+                    <h3 class="document-title">Questionnaire santé pour adulte</h3>
+                    <p class="document-description">Questionnaire santé de l'UFOLEP pour les adultes</p>
+                    <div class="document-meta">
+                    <span class="document-category">Médical</span>
+                    <span class="document-size">280 KB</span>
+                    </div>
+                    <button class="btn-download" onclick="downloadDocument('questionnaire-santé-adulte')">
+                    Télécharger
+                    </button>
+                </div>
+            </div>
+
+            <div class="document-card">
+                <div class="document-info">
+                    <div class="document-icon">📄</div>
+                    <h3 class="document-title">Questionnaire santé pour mineur</h3>
+                    <p class="document-description">Questionnaire santé de l'UFOLEP pour les mineurs</p>
+                    <div class="document-meta">
+                    <span class="document-category">Médical</span>
+                    <span class="document-size">232 KB</span>
+                    </div>
+                    <button class="btn-download" onclick="downloadDocument('25-26-Questionnaire_de_sante_mineur')">
+                    Télécharger
+                    </button>
+                </div>
+            </div>
+
+            <div class="document-card">
+                <div class="document-info">
+                    <div class="document-icon">📄</div>
+                    <h3 class="document-title">Feuille de tarif</h3>
+                    <p class="document-description">Description des tarifs</p>
+                    <div class="document-meta">
+                    <span class="document-category">Tresorerire</span>
+                    <span class="document-size">132 KB</span>
+                    </div>
+                    <button class="btn-download" onclick="downloadDocument('tarif-25-26')">
+                    Télécharger
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section footer-left">
+                    <div class="footer-logo-title">
+                        <img class="logo-footer" src="img-code/club.png">
+                        <h3 class="footer-title">Volley Ball Meymac</h3>
+                    </div>
+                        <P class="footer-text">Club de volley depuis 2025. Rejoignez-nous pour vivre l'aventure sportive !</P>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-subtitle">Contact</h3>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">📍 Complexe sportif de Grandchamp, 19250 Meymac</div>
+                        <div class="footer-contact-item">📞 06 10 34 58 41</div>
+                        <div class="footer-contact-item">📧 volleyballmeymac@gmail.com</div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-subtitle">Suivez-nous</h3>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/volleyball_meymac/" class="social-link"><img src="img-code/insta.png"></a>
+                        <a href="https://www.facebook.com/volleyballmeymac/" class="social-link"><img src="img-code/facebook.png"></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Volley Ball Meymac. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="lightbox" id="lightbox">
+        <img id="lightbox-img" src="" alt="image agrandie">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+    <script src="script.js"></script>
+    <script>
+    document.getElementById("burger").addEventListener("click", () => {
+        document.querySelector("nav").classList.toggle("active");
+    });
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1121 @@
+
+
+@font-face {
+    font-family: 'Aerosoldier';
+    src: url(police/AerosoldierBasic_PERSONAL_USE_ONLY.otf) format(opentype);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Zenitha';
+    src: url(police/ZenithaClassic_PERSONAL_USE_ONLY.otf) format(opentype);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Kastroo';
+    src: url(police/KASTROO.otf) format(opentype);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Perfect';
+    src: url(police/KGPerfectPenmanship.otf) format(opentype);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rocket';
+    src: url(police/Rocket-Thunder-Script.ttf) format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Supernova';
+    src: url(police/Supernova\ -\ Personal\ Used.ttf) format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Ghrathe';
+    src: url(police/Ghrathe.ttf) format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Blue-Ocean';
+    src: url(police/BLUE\ OCEAN.ttf) format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Varsity-outline';
+    src: url(police/Golden\ Varsity\ Outline.ttf) format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+.maillot-video-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+#maillotVideo {
+    width: 420px;
+    max-width: 90%;
+    height: 535px;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 6px 18px rgba(12, 99, 107, 0.8);
+    box-sizing: border-box;
+}
+
+#maillotSlider {
+    width: 300px;
+    max-width: 80%;
+    cursor: pointer;
+}
+
+.main-nav {
+    position: fixed;             /* fixe en haut de l'écran */
+    top: 10px;                      /* collé au bord supérieur */
+    left: 50%;                   /* pour centrer horizontalement */
+    transform: translateX(-50%); /* centre exactement */
+    
+    background-color: #2e318a;
+    border-radius: 30px;
+    padding: 12px 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: calc(100% - 40px);
+    max-width: 1400px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.nav-logo {
+    height: 40px;
+    width: auto;
+}
+.nav-title {
+    font-family: Ghrathe;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    white-space: nowrap;
+}
+.nav-right {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-right li a {
+    font-family: Supernova;
+    font-size: 13px;
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+}
+
+.nav-right li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.burger {
+    display: none;
+}
+body {
+    padding-top: 10px;
+}
+header {
+    text-align: center;
+    padding: 80px 20px;
+}
+header h1{
+    font-family: Ghrathe;
+    font-size: 5rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+    color: #2e318a;
+}
+header p {
+    font-size: 1,5rem;
+    font-weight: 400;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+header img {
+    max-width: 250px;
+    height: auto;
+    margin-top: 20px;
+}
+
+section {
+    padding: 80px 20px;
+}
+.bg-blue {
+    background-color: #ebf9fa;
+}
+.bg-white {
+    background-color: white;
+}
+.bg-bleu-foncer {
+    background-color: #327ba8;
+}
+#notre-club,
+#entrainement,
+#competition,
+#maillot,
+#evenement,
+#gallery-photo,
+#documents {
+    scroll-margin-top: 90px;
+}
+h2 {
+    font-family: Supernova;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+h3 {
+   font-family: Kastroo;
+    font-size: 1.5rem;
+    margin-bottom: 20px; 
+}
+p {
+    font-family: Perfect;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.widget-club {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+}
+.club-card {
+    flex: 1 1 50%; 
+    max-width: 50%;
+    background-color: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 6px 18px rgba(12, 99, 107, 0.8);
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.club-card:hover {
+    transform: scale(1.05); /* zoom léger */
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+.club-info p {
+    line-height: 2;
+    text-align: left;
+}
+.contact-info {
+    line-height: 3;
+    font-size: 1.1rem;
+}
+.contact-info p {
+    text-align: left;
+}
+
+.interactive-map h3{
+    text-align: center;
+}
+
+.training-cards {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+}
+.training-card {
+    flex: 1 1 50%; 
+    max-width: 50%;
+    background-color: #ebf9fa;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 6px 18px rgba(12, 99, 107, 0.8);
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.training-card:hover {
+    transform: scale(1.05); /* zoom léger */
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);   
+}
+.training-day {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: #2e318a;
+}
+.training-info {
+    font-family: Perfect;
+    font-size: 1.2;
+    line-height: 4;
+}
+/* Conteneur principal */
+.match-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /* espace entre les matchs */
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Chaque match */
+.match-card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 16px 20px;
+    box-shadow: 0 6px 18px rgba(12, 99, 107, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.match-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+}
+
+/* Date du match */
+.match-date {
+    font-family: Supernova;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #105da2;
+}
+
+/* Équipes */
+.match-teams {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.match-teams img.logo-team {
+    display: inline-block;       /* permet de gérer la taille */
+    width: auto;                 /* largeur fixe */
+    height: 70px;                /* hauteur fixe */
+    margin-right: 8px;           /* espace entre le logo et le nom */
+    vertical-align: middle;      /* aligne le logo avec le texte */
+}
+
+.match-teams img.logo-team img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;           /* garde les proportions et remplit le bloc */
+    border-radius: 50%;          /* optionnel : rond comme AVB */
+}
+
+.team {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.team-name {
+    font-family: Kastroo;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2e318a;
+}
+
+/* "VS" au centre */
+.team-score {
+    font-family: Supernova;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #105da2;
+}
+.team-vs {
+    font-family: Supernova;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #105da2;
+}
+
+
+/* Heure ou score */
+.match-score {
+    font-family: Perfect;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Type de compétition */
+.match-type {
+    background-color: #105da2;
+    color: white;
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-family: Perfect;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Lieu */
+.match-location {
+    font-family: Perfect;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Statut du match (À venir / Résultat) */
+.match-status {
+    font-family: Supernova;
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: bold;
+}
+
+/* Responsive pour mobile */
+@media (max-width: 600px) {
+    .match-teams {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+    .team-score {
+        text-align: center;
+    }
+    .team-vs{
+        display: none;
+    }
+}
+.carrousel {
+    margin-top: 85px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Zone où les logos seront positionnés */
+.carrousel-track {
+    position: relative;
+    width: 420px; /* tu peux ajuster selon ton design */
+    height: 160px; /* hauteur fixe pour le carrousel */
+}
+
+/* Les logos (balises <a>) */
+.carousel-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+    transition: all 0.6s ease;
+    z-index: 1;
+}
+
+/* Image à l'intérieur de chaque logo */
+.carousel-item img {
+    height: 200px; /* ajuste la taille du logo */
+    width: auto;
+    display: block;
+}
+
+/* Logo central actif */
+.carousel-item.active {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+    z-index: 3;
+}
+
+/* Logo précédent (à gauche, derrière) */
+.carousel-item.prev {
+    opacity: 0.5;
+    transform: translate(-120%, -75%) scale(0.9);
+    z-index: 2;
+}
+
+/* Logo suivant (à droite, derrière) */
+.carousel-item.next {
+    opacity: 0.5;
+    transform: translate(20%, -75%) scale(0.9);
+    z-index: 2;
+}
+.gallery-filter {
+    display: flex;           
+    justify-content: center;  
+    align-items: center;       
+    gap: 20px;                  
+    margin: 30px 0;            
+}
+.button-filter {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    
+}
+.button-filter img {
+    height: 90px; /* ajuste selon ton design */
+    width: auto;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.button-filter:hover img {
+    transform: scale(1.05);
+    opacity: 0.85;
+}
+.photo {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 24px;
+    padding: 30px;
+}
+.photo-card {
+    width: 100%;
+    aspect-ratio: 4 / 3;     /* toutes les photos ont le même format */
+    border-radius: 16px;
+    overflow: hidden;        /* coupe l’image dans les coins arrondis */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+.photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   
+    display: block;
+}
+/* fond sombre */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;              /* caché par défaut */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* image en grand */
+.lightbox img {
+    width: 80vw;          /* largeur fixe relative à l’écran */
+    height: 80vh;         /* hauteur fixe */
+    object-fit: contain;  /* garde les proportions */
+    background: black;    /* évite les bords blancs */
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    animation: zoomIn 0.3s ease;
+}
+
+/* animation d’ouverture */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.documents-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 30px;
+
+}
+.document-card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 6px 18px rgba(12, 99, 107, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 0 0 48%; /* largeur environ 50% */
+    display: flex;
+    flex-direction: row; /* texte à gauche, bouton à droite */
+    align-items: center; /* centre verticalement */
+    justify-content: space-between; /* espace entre texte et bouton */
+    gap: 20px;
+}
+.document-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1; /* prend tout l’espace disponible à gauche */
+}
+.document-card p {
+    text-align: left;
+}
+.document-meta {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    flex-wrap: wrap; /* pour ne pas dépasser */
+}
+.btn-download {
+    background-color: #105da2;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 16px 28px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0; /* ne réduit pas le bouton */
+}
+.document-category {
+    background-color: #105da2;
+    color: white;
+    padding: 6px 20px;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.document-info {
+    flex-wrap: nowrap;
+}
+.document-size {
+    background-color: #105da2;
+    color: white;
+    padding: 6px 20px;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+@media (max-width: 800px) {
+    .document-card {
+        flex-direction: column; /* bouton dessous sur mobile */
+        align-items: flex-start;
+    }
+    .btn-download {
+        align-self: flex-start;
+    }
+}
+footer {
+    background-color:#327ba8 ;
+    padding: 40px;
+    color: white;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(245, 245, 245, 0.3);
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px; /* espace entre les sections */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.logo-footer {
+    height: 50px;
+    width: auto;
+}
+.footer-left {
+    flex: 1 1 300px;
+}
+.footer-logo-title {
+    display: flex;
+    gap: 15px; /* espace entre logo et titre */
+    margin-bottom: 10px;
+}
+.footer-text {
+    margin: 0;
+    line-height: 1.5;
+}
+.footer-section {
+    flex: 1 1 200px;
+}
+.footer-content h3 {
+    font-family: Supernova;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.footer-content p {
+    line-height: 2;
+}
+.footer-contact-item {
+    font-family: Perfect;
+    margin-bottom: 30px;
+    line-height: 2;
+}
+.footer-subtitle {
+    margin-bottom: 10px;
+}
+.footer-contact-item {
+    margin-bottom: 20px;
+    display: block;
+}
+.footer-social {
+    display: flex;
+    gap: 20;
+}
+.footer-social img {
+    height: 110px;
+    width: auto;
+}
+.evenements-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 30px;
+}
+.evenement-card {
+    text-align: center;
+    background-color: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 6px 18px rgba(12, 99, 107, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 0 0 48%; /* largeur environ 50% */
+    align-items: center; /* centre verticalement */
+    gap: 20px;
+    
+}
+.Presentation-img {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+.event-type-badge {
+    display: inline-block;
+    background-color: #105da2;
+    color: white;
+    padding: 6px 20px;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.envent-details {
+    font-family: Perfect;
+    margin-bottom: 30px;
+    line-height: 3;
+}
+.header-widgets {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Widget général */
+.header-widget {
+    background-color: #ebf9fa;
+    padding: 10px;
+    border-radius: 8px;
+    width: 25%; /* taille réduite pour header */
+    box-sizing: border-box;
+    font-size: 0.85rem;
+}
+
+/* Widget Événement */
+.header-widget-event .widget-body {
+    display: block; /* comme dans les cartes */
+}
+
+.header-widget-event .event-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.header-widget-event .event-type-badge {
+    font-size: 0.75rem;
+    color: #333;
+    display: block;
+    margin-bottom: 3px;
+}
+
+.header-widget-event .event-title {
+    font-weight: bold;
+    font-size: 0.85rem;
+    margin: 0 0 3px 0;
+}
+
+.header-widget-event .event-date,
+.header-widget-event .event-location {
+    font-size: 0.75rem;
+    color: #555;
+    margin: 0;
+}
+/* =====================================================
+   MOBILE FIX FINAL – SANS TOUCHER AUX SPONSORS
+   ===================================================== */
+@media (max-width: 768px) {
+
+  /* --------- RESET MOBILE PROPRE --------- */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  section {
+    padding: 25px 15px;
+  }
+
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.3rem; }
+  h3 { font-size: 1.1rem; }
+
+  p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  /* =====================================================
+     NOTRE CLUB – largeur + centrage
+     ===================================================== */
+  .widget-club {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 0;
+  }
+
+  .club-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 15px;
+  }
+
+  .club-card p {
+    font-size: 0.85rem;
+  }
+
+  /* =====================================================
+     ENTRAINEMENTS – FIN DU 50%
+     ===================================================== */
+  .trainings-container,
+  .training-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 0;
+  }
+
+  .training-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 15px;
+  }
+
+  .training-day {
+    font-size: 1rem;
+  }
+
+  .training-info-item {
+    font-size: 0.8rem;
+  }
+
+  /* =====================================================
+     COMPÉTITIONS / ÉVÉNEMENTS – CENTRAGE PARFAIT
+     ===================================================== */
+  .match-list,
+  .evenements-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 0;
+  }
+
+  .match-card,
+  .evenement-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 15px;
+  }
+
+  /* empêcher que ça touche un bord */
+  .match-card *,
+  .evenement-card * {
+    max-width: 100%;
+  }
+
+  /* =====================================================
+     TEXTE GLOBAL DES CARTES
+     ===================================================== */
+  .match-card p,
+  .evenement-card p,
+  .document-card p {
+    font-size: 0.8rem;
+  }
+
+  /* =====================================================
+     GALERIE – pas compressée
+     ===================================================== */
+  .gallery-filter {
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .photo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .photo-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+  }
+
+  /* =====================================================
+     MAILLOT – pas coupé
+     ===================================================== */
+  #maillot video {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* =====================================================
+     DOCUMENTS – alignés
+     ===================================================== */
+  .documents-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .document-card {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .gallery-filter {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    gap: 10px 14px;
+    margin: 20px 0;
+  }
+
+  .button-filter img {
+    height: 70px;
+    width: auto;
+  }
+  header {
+    padding: 60px 15px 30px;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+  }
+
+  header p {
+    font-size: 0.85rem;
+    max-width: 90%;
+    margin: 0 auto 15px;
+  }
+
+  header img {
+    max-width: 120px;
+    margin: 10px auto;
+  }
+
+  .header-widgets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 15px;
+  }
+
+  .header-widget {
+    width: 92%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 768px) {
+    .main-nav {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 100%;
+        border-radius: 0;
+        padding: 10px 15px;
+    }
+
+    .burger {
+        display: block; /* burger visible */
+        font-size: 24px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    .nav-right {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #0a5ea8;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 10px 0;
+        z-index: 999;
+    }
+
+    .nav-right.active {
+        display: flex;
+    }
+
+    .nav-right li {
+        text-align: center;
+        padding: 12px 0;
+    }
+}
+@media (max-width: 768px) {
+    /* Cibler uniquement ces deux logos dans le carousel */
+    .carousel-item img[src*="farges-bois"] {
+        height: 150px; /* ajuste selon ce qui rentre */
+        width: auto;
+    }
+
+    .carousel-item img[src*="atelier-techno-meymac"] {
+        height: 120px; /* même logique */
+        width: auto;
+    }
+}
+/* ===========================
+   CORRECTION ESPACES FOOTER MOBILE
+   =========================== */
+@media (max-width: 768px) {
+
+  /* ANNULER LE GROS PADDING DES SECTIONS */
+  footer {
+    padding: 15px !important;
+  }
+
+  /* SI LE FOOTER EST DANS UNE SECTION */
+  section footer,
+  footer section {
+    padding: 0 !important;
+  }
+
+  /* ANNULER L’HÉRITAGE DES SECTIONS */
+  footer * {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* STRUCTURE FOOTER */
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px !important;
+  }
+
+  .footer-section,
+  .footer-left {
+    padding: 0 !important;
+  }
+
+  .footer-content h3 {
+    margin-bottom: 6px !important;
+    font-size: 1.1rem;
+  }
+
+  .footer-content p,
+  .footer-contact-item {
+    margin-bottom: 6px !important;
+    line-height: 1.4 !important;
+    font-size: 0.85rem;
+  }
+
+  .footer-bottom {
+    margin-top: 10px !important;
+    padding-top: 8px;
+    font-size: 0.75rem;
+  }
+}
+#map {
+    width: 100%;
+    height: 500px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(12, 99, 107, 0.4);
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    #map {
+        height: 280px;
+    }
+}
+
+.btn-itineraire {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 18px;
+    background-color: #2e318a;
+    color: white;
+    border-radius: 20px;
+    font-family: Supernova;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+.btn-itineraire {
+    display: block;
+    width: fit-content;
+    margin: 12px auto 0 auto; /* centre horizontalement */
+}
+
+.btn-itineraire:hover {
+    background-color: #1f2268;
+}
+
+
+
+
