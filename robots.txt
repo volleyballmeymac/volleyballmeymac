@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://volleyballmeymac.github.io/volleyballmeymac/sitemap.xml
